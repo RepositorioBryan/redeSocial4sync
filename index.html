@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./imgs/LOOXTER.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>LOOXTER</title>
+</head>
+<body>
+    <header>
+        <h1>4SYNC</h1>
+        <i class="bi bi-search" id="toggleButton" style="color: #03a596; font-size: 30px; display: flex; gap: 1rem;">
+
+            <form class="formulario-search">
+                <label>
+                    <input class="search-input" type="search" name="" id="">
+                </label>
+            </form>
+
+        </i>
+            
+        
+        <div class="toggle-area" id="areaToggle" style="width: 350px; height: 100px;">
+                <ul>
+                    <li class="outroli">
+                        <i class="bi bi-search">
+                        <form>
+                            <label>
+                                <input class="search-input" type="search" name="" id="">
+                            </label>
+                        </form>
+                    </i>
+                </li>
+                </ul>
+            </div>
+
+
+        <div class="conteiner-direito">
+            <i class="bi bi-bell" style="color: #03a596; font-size: 30px;" id="notificacao"></i>
+                <div class="Login" id="fPerfil">
+                    
+                    <i class="bi bi-person-circle"></i>
+                    <div class="spans">
+                        <a href="./login2/index.html">
+                            <span>Entrar</span>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="toggle-area1" id="areaToggle2">
+                    <ul>
+                        <li><h4 onclick="redirecionarPerfil()">Perfil</h4></li>
+                        <li><h4 onclick="deslogar()">Deslogar</h4></li>
+                    </ul>
+                </div>
+
+                <div class="toggle-area1" id="areaTogglenotificacao">
+                    <ul>
+                        <li><h4>notificacao 1</h4></li>
+                        <li><h4>notificacao 2</h4></li>
+                        <li><h4>notificacao 3</h4></li>
+                        <li><h4>notificacao 4</h4></li>
+                        <li><h4>notificacao 5</h4></li>
+                    </ul>
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="items-bar">
+            <i class="bi bi-house-fill" id="home"></i>
+            <i class="bi bi-plus-circle" id="realizarPostagem"></i>
+            <i class="bi bi-people-fill" id="chat"></i>
+        </div>
+    </main>
+
+
+    <div class="conteiner-home" id="c-home">
+        <div class="conteiner_publi">
+            <div class="conteiner-publicacao">
+                
+
+                <div class="conteinerPostar" id="fundoPost">
+                    <!-- <div class="conteiner-entradaPost" id="conteinerPost">
+                        <h1>Faça Uma Publicação</h1>
+                         <div class="c-input">
+                             
+                             <input type="text" id="post" name="" placeholder="oque você está pensando ?">
+                             <button id="saveButton" onclick="location.reload()">Postar</button>
+                         </div>
+                    </div> -->
+                </div>
+
+                <div class="conteiner-entradaPost" id="conteinerPost">
+                    <div style="display: flex; justify-content: space-around; width: 100%;">
+                        <h1>Texto para a pessoa escrever o titulo</h1>
+                        <i class="bi bi-x-lg" id="botaofechar"></i>
+                    </div>
+                    <div class="c-input">
+                         
+                         <input type="text" id="post" name="" placeholder="oque você está pensando ?">
+                         
+                    </div>
+                    <div class="conteiner-linha-postar">
+                        <div class="botoes">
+                            <i class="bi bi-image-fill"></i>
+                            <i class="bi bi-emoji-smile"></i>
+                        </div>
+                           <i class="bi bi-check-square-fill" id="saveButton" onclick="location.reload()"></i>
+                       </div>
+                    </div>
+
+                <div class="espaçoPublis" id="espaçoPublis">
+
+                </div>
+                <div class="publicoment" id="publicoment">
+                    <div class="cima">
+                        <div class="lado_esquerdo">
+                            <i class="bi bi-person"></i>
+                            <h4>User</h4>
+                        </div>
+                        <i class="bi bi-sliders"></i>
+                    </div>
+                    <div class="meio">
+                        <img src="./imgs/img_teste.jpg" alt="">
+                        <img src="./imgs/img_teste.jpg" alt="">
+                    </div>
+                    <div class="baixo">
+                        <i class="bi bi-star"></i>
+                        <i class="bi bi-chat-left-text" id="comentarios-expancao"></i>
+                        <i class="bi bi-share"></i>
+                    </div>
+                    <div class="comentarios" id="parte-comentarios" style="opacity: 0%;">
+                        <ol>
+                            <li>ola</li>
+                            <li>sla</li>
+                            <li>td bem</li>
+                            <li>oi</li>
+                            <li>sim</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="publi1">
+                    <div class="cima">Página 1</div>
+                </div>
+                <div class="publi1">
+                    <div class="cima">Página 1</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteiner_publi2">
+            <div class="conteinerPubli2">
+
+                <div class="conteiner-home" id="c-home">
+                    <div class="conteiner_publi">
+                        <div class="conteiner-publicacao" style="display: flex; justify-content: center; align-items: center;">
+
+                            <div class="conteinerPostar" style=" width: 300px; padding: 1rem;">
+                                <div class="conteiner-entradaPost">
+                                    <h1>Amigos</h1>
+                                </div>
+                            </div>
+
+                            <div class="espaçoPublis" id="espaçoPublis">
+            
+                            </div>
+                            <div class="publi1">
+                                <div class="cima">
+                                    <div class="lado_esquerdo">
+                                        <i class="bi bi-person"></i>
+                                        <h4>User</h4>
+                                    </div>
+                                    <i class="bi bi-sliders"></i>
+                                </div>
+                                <div class="meio">
+                                    <img src="./imgs/img_teste.jpg" alt="">
+                                    <img src="./imgs/img_teste.jpg" alt="">
+                                </div>
+                                <div class="baixo">
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-chat-left-text"></i>
+                                    <i class="bi bi-share"></i>
+                                </div>
+                            </div>
+                            <div class="publi1">
+                                <div class="cima">Página 1</div>
+                            </div>
+                            <div class="publi1">
+                                <div class="cima">Página 1</div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+
+        
+
+
+    </div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

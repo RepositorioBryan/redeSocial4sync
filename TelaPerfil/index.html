@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>LOOXTER-PERFIL</title>
+</head>
+<body>
+    <div class="imagemPerfil" id="imagemPerfil">
+        
+    </div>
+    <div id="espaçoPublis" class="espaçoPublis"></div>
+
+    
+    <form onsubmit="dadosPerfil(event)" id="formCliente" style="display: none;">
+        <h1>Configurar</h1>
+        
+        <div class="conteiner-entrada">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+        </div>
+
+        <div class="conteiner-entrada">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha">
+        </div>
+
+        <div class="conteiner-entrada">
+            <label for="foto">Foto de Perfil:</label>
+            <label for="foto" class="custom-file-upload">Selecionar Imagem</label>
+            <input class="custom-file-upload" type="file" accept="image/*" id="foto" name="foto" onchange="imagemPerfil()">
+            <div id="imagem" class="imagem_perfil"></div>
+        </div>
+        <!-- <br> -->
+        <button onclick="mudarNome()"style="background-color: green;">concluir</button>
+        <br>
+        <button onclick="close()" style="background-color: red;">cancelar</button>
+    </form>
+
+    <a href="../index.html" style="color: white;">Tela Inicial</a>
+</body>
+<script src="./script.js"></script>
+</html>
