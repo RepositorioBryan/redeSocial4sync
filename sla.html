@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Input com Animação Lateral</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+    }
+
+    #inputAnimado {
+      width: 0;
+      padding: 10px;
+      font-size: 16px;
+      opacity: 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: width 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+      overflow: hidden;
+    }
+
+    /* Classe ativa: mostra e expande o input */
+    #inputAnimado.ativo {
+      width: 250px;
+      opacity: 1;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="animarInput()">Abrir Input</button>
+  <input type="text" id="inputAnimado" placeholder="Digite algo...">
+
+  <script>
+    function animarInput() {
+      const input = document.getElementById("inputAnimado");
+      input.classList.toggle("ativo");
+
+      // Se quiser focar automaticamente ao abrir:
+      if (input.classList.contains("ativo")) {
+        setTimeout(() => input.focus(), 400); // espera a animação terminar
+      }
+    }
+  </script>
+
+</body>
+</html>

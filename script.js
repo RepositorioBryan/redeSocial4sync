@@ -1,8 +1,11 @@
 function subirElemento(elemento, posicao, tempo) {
     elemento.style.transition = `transform ${tempo}s ease`;
     
-    elemento.style.transform = `translateY(${posicao}%)`;
+    elemento.style.transform = `translateY(${posicao}dvh)`;
 }
+
+
+
 
 function descerElemento(elemento, posicao, tempo) {
     elemento.style.transition = `transform ${tempo}s ease`;
@@ -12,8 +15,12 @@ function descerElemento(elemento, posicao, tempo) {
 
 
 function escurecer(elemento, tempo) {
+    
     elemento.style.transition = `opacity ${tempo}s ease`;
     
+    elemento.style.display = "flex"
+    elemento.style.transition = `display ${tempo}s ease`
+
     elemento.style.opacity = `0.5`;
     elemento.style.zIndex = "1000";
 }
@@ -23,19 +30,28 @@ function clarear(elemento, tempo) {
     elemento.style.transition = `opacity ${tempo}s ease`;
     
     elemento.style.opacity = `0`;
-    elemento.style.zIndex = "500";
+    elemento.style.zIndex = "-100";
+    elemento.style.display = "none"
 }
 
+function animarInput() {
+    const input = document.getElementById("inputAnimado");
+    input.classList.toggle("ativo");
+
+    if (input.classList.contains("ativo")) {
+      setTimeout(() => input.focus(), 400);
+    }
+  }
 
 
 
 document.getElementById("realizarPostagem").addEventListener("click", function() {
 
     var fundo = document.getElementById("fundoPost");
-    escurecer(fundo, 3)
+    escurecer(fundo, 5)
 
     var conteiner = document.getElementById("conteinerPost");
-    subirElemento(conteiner, -450, 3)
+    subirElemento(conteiner, -150, 3)
 
     
 })
