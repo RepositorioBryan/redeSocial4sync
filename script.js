@@ -1,11 +1,72 @@
+
+
+
+// function updateVideos() {
+//     const videosToRemove = document.querySelectorAll('.video-remove');
+//     const videosContainer = document.body;
+
+//     if (window.innerWidth <= 1300) {
+//         window.reload();
+//         videosToRemove.forEach(video => {
+//             if (!video.classList.contains('removed')) {
+//                 video.classList.add('removed');
+//                 video.remove(); 
+//             }
+//         });
+//     } else {
+//         videosToRemove.forEach(video => {
+//             if (video.classList.contains('removed')) {
+//                 const newVideo = document.createElement('video');
+//                 newVideo.src = video.src;
+//                 newVideo.controls = true;
+//                 videosContainer.appendChild(newVideo); 
+//                 video.classList.remove('removed'); 
+//             }
+//         });
+//     }
+// }
+
+// updateVideos();
+// window.addEventListener('resize', updateVideos);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const largura = window.innerWidth;
+    const altura = window.innerHeight;
+
+    console.log(`Largura: ${largura}px`);
+    console.log(`Altura: ${altura}px`);
+
+    if (largura <= 1000) {
+        console.log("1")
+        var botao1 = document.getElementById("toggleButton1")
+        var botao2 = document.getElementById("toggleButton2")
+        botao1.style.display = "none"
+        botao2.style.display = "flex"
+    } else {
+        
+        var botao1 = document.getElementById("toggleButton1")
+        var botao2 = document.getElementById("toggleButton2")
+        botao1.style.display = "flex"
+        botao2.style.display = "none"
+        console.log("2")
+    }
+
+
+  });
+
+
+
+
+
+
+
+
+
 function subirElemento(elemento, posicao, tempo) {
     elemento.style.transition = `transform ${tempo}s ease`;
     
     elemento.style.transform = `translateY(${posicao}dvh)`;
 }
-
-
-
 
 function descerElemento(elemento, posicao, tempo) {
     elemento.style.transition = `transform ${tempo}s ease`;
@@ -42,6 +103,28 @@ function animarInput() {
       setTimeout(() => input.focus(), 400);
     }
   }
+
+
+
+
+var verificapesquisa = false;
+
+function Pesquisa() {
+    var pesquisa = document.getElementById("conteiner_pesquisa");
+    
+    if(verificapesquisa === false) {
+        subirElemento(pesquisa, 0, 2 );
+        verificapesquisa = true
+    } else {
+        console.log("ola")
+        descerElemento(pesquisa, 100, 2);
+        verificapesquisa = false
+    }
+    
+}
+
+
+
 
 
 

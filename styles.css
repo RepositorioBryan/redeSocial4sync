@@ -54,7 +54,7 @@ header {
     /* max-width: 100%; */
     box-sizing: border-box;
     position: fixed;
-    z-index: 1000;
+    z-index: 300;
     height: 80px;
     padding: 1rem 2rem 1rem 2rem;
     display: flex;
@@ -327,20 +327,63 @@ header {
     }
 }
 
+.bi-search {
+    color: #03a596;
+    font-size: 30px;
+    display: none;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.divSearch {
+    display: flex;
+    gap: 1rem;
+}
+
+.fundo_pesquisa {
+    transform: translateY(100%);
+    /* bottom: -100%; */
+    /* display: none; */
+    position: fixed;
+    z-index: 300;
+    width: 100%;
+    height: 100%;
+    background-color: #1f2937;
+    .conteiner_pesquisa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+
+        input {
+            background-color: #858585a6;
+            width: 100%;
+            border: 2px solid #03a596;
+            border-radius: 10px;
+            box-shadow:0 0 0 1px rgb(146, 146, 146);
+            font-size: 20px;
+        }
+    }
+}
 
 
 #inputAnimado {
     width: 0;
+    opacity: 0;
+    /* width: 100%;
+    opacity: 1; */
     padding: 10px;
     font-size: 12px;
-    opacity: 0;
     border-radius: 4px;
     transition: width 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
     overflow: hidden;
   }
 
   #inputAnimado.ativo {
-    width: 100px;
+    width: 250px;
     opacity: 1;
     padding: 10px;
   }
@@ -350,7 +393,7 @@ main {
     width: 100%;
     bottom: 0;
     position: fixed;
-    z-index: 1000;
+    z-index: 400;
     margin-top: 75px;
     background-color: #1f2937;
     /* position: relative; */
@@ -892,7 +935,6 @@ main {
         /* max-width: 100%; */
         box-sizing: border-box;
         position: fixed;
-        z-index: 1000;
         height: 80px;
         padding: 0.5rem 1rem 0.5rem 1rem;
         display: flex;
